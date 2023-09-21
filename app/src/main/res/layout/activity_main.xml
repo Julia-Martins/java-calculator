@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:text="@string/title"
+        android:textColor="@color/light_blue"
+        android:textStyle="bold"
+        android:textSize="45sp"
+        android:fontFamily="@font/atlantisheadlinebold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInp_num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+
+        android:theme="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+
+        app:hintTextColor="@color/light_blue"
+        android:textColorHint="@color/light_blue"
+
+        app:boxStrokeColor="@color/light_blue"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtAppCompat_num1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/num"
+            android:fontFamily="@font/atlantistextbold"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+
+            android:textColor="@color/light_blue"
+            android:textColorHint="@color/light_blue"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInp_num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+
+        app:hintTextColor="@color/light_blue"
+        android:textColorHint="@color/light_blue"
+
+        app:boxStrokeColor="@color/light_blue"
+
+        android:theme="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtInp_num1">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtAppCompat_num2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/num"
+            android:textColor="@color/light_blue"
+
+            android:fontFamily="@font/atlantistextbold"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_operations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtInp_num2"
+    >
+
+        <CheckBox
+            android:id="@+id/check_operations_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="30dp"
+
+            android:button="@drawable/plus_radio_button_selector"
+            android:buttonTintMode="@color/light_blue" />
+
+        <CheckBox
+            android:id="@+id/check_operations_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="30dp"
+
+            android:button="@drawable/minus_radio_button_selector"
+            android:buttonTintMode="@color/light_blue" />
+
+        <CheckBox
+            android:id="@+id/check_operations_mult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="30dp"
+
+            android:button="@drawable/mult_radio_button_selector"
+            android:buttonTintMode="@color/light_blue"/>
+
+        <CheckBox
+            android:id="@+id/check_operations_divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:button="@drawable/divide_radio_button_selector"
+            android:buttonTint="@color/light_blue"
+            android:buttonTintMode="@color/light_blue"
+        />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+
+        android:backgroundTint="@color/light_blue"
+
+        android:fontFamily="sans-serif-medium"
+        android:padding="8dp"
+        android:text="@string/btn_calculate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:icon="@drawable/calculate_24"
+        app:iconGravity="textStart"
+        app:iconSize="25dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lay_operations" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+
+        android:hint="@string/result"
+        app:hintEnabled="false"
+
+        app:boxStrokeColor="@color/light_blue"
+
+        android:theme="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:enabled="false"
+            android:padding="15dp"
+            android:fontFamily="@font/atlantisregularsmallcaps"
+            android:textAlignment="center"
+            android:hint="@string/result"
+            app:hintTextColor="@color/light_blue"
+            android:textColorHint="@color/light_blue"
+            android:letterSpacing="0.5"
+
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+
+        android:backgroundTint="@color/light_blue"
+
+        android:fontFamily="sans-serif-medium"
+        android:padding="8dp"
+        android:text="@string/btn_clean"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_answer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

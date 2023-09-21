@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calculator Java</string>
+    <string name="title">Calculator</string>
+    <string name="num">Enter Numbers:</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_clean">Clear</string>
+    <string name="result">Your Result </string>
+
+</resources>
